@@ -17,13 +17,13 @@ workflows:
     scripts:         
       - |
           # set up key.properties
-          echo $FCI_KEYSTORE | base64 --decode > $FCI_KEYSTORE_PATH
-          cat >> "$FCI_BUILD_DIR/android/key.properties" <<EOF
-          storePassword=$FCI_KEYSTORE_PASSWORD
-          keyPassword=$FCI_KEY_PASSWORD
-          keyAlias=$FCI_KEY_ALIAS
-          storeFile=/tmp/keystore.keystore
-          EOF
+#           echo $FCI_KEYSTORE | base64 --decode > $FCI_KEYSTORE_PATH
+#           cat >> "$FCI_BUILD_DIR/android/key.properties" <<EOF
+#           storePassword=$FCI_KEYSTORE_PASSWORD
+#           keyPassword=$FCI_KEY_PASSWORD
+#           keyAlias=$FCI_KEY_ALIAS
+#           storeFile=/tmp/keystore.keystore
+#           EOF
       - |
           # set up local properties
           echo "flutter.sdk=$HOME/programs/flutter" > "$FCI_BUILD_DIR/android/local.properties"
