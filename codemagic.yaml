@@ -26,6 +26,9 @@ workflows:
 #           EOF
       - |
           # set up local properties
+      - name: Appium Flutter Driver
+        script: |
+          npm i -g appium-flutter-driver
           echo "flutter.sdk=$HOME/programs/flutter" > "$FCI_BUILD_DIR/android/local.properties"
       - flutter packages pub get
       - flutter build apk --debug --flavor prod lib/main_prod.dart
