@@ -28,8 +28,8 @@ workflows:
           # set up local properties
           echo "flutter.sdk=$HOME/programs/flutter" > "$FCI_BUILD_DIR/android/local.properties"
       - flutter packages pub get
-      - flutter build apk --release --flavor prod lib/main_prod.dart
-      - flutter build apk --release --flavor dev lib/main_dev.dart
+      - flutter build apk --debug --flavor prod lib/main_prod.dart
+      - flutter build apk --debug --flavor dev lib/main_dev.dart
 #       - name : Maven
 #         script: |
 #          mvn clean install
