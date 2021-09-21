@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 
 void main() {
+  enableFlutterDriverExtension();
+  init();
   runApp(Home());
 }
 
